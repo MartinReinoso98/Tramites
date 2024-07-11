@@ -8,9 +8,9 @@ body {
     background-color: #f4f4f4;
 }
 header {
-    background-color: #4CAF50;
+    background-color: #45a9d8;
     color: white;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 .slider-container {
@@ -19,14 +19,17 @@ header {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    position: relative;
+    overflow: hidden; /* Asegura que el sol no sobresalga */
 }
 .slider {
     width: 80%;
     max-width: 800px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 6px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background-color: white;
+    z-index: 2;
 }
 .slides {
     display: flex;
@@ -58,33 +61,37 @@ header {
     transition: background-color 0.3s;
 }
 .nav-button:hover {
-    background-color: #4CAF50;
+    background-color: #45a9d8;
 }
 footer {
-    background-color: #4CAF50;
+    background-color: #45a9d8;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     position: relative;
 }
 .whatsapp-icon {
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     background-color: white;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 10px;
     transition: background-color 0.3s;
 }
 .whatsapp-icon img {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
 }
 .whatsapp-icon:hover {
     background-color: #25D366;
 }
+p{
+    font-size: 20px;
+}
+
 @media (max-width: 600px) {
     .nav-button {
         padding: 5px;

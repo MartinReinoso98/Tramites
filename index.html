@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
+    <title>Servicio de Partidas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
             <div class="slides">
                 <div class="slide">
                     <h2>Gestoria de Partidas</h2>
-                    <p>Gestoria de partidas de nacimiento, matrimonio y defunción.</p>
+                    <p>Gestoria de partidas de nacimiento, matrimonio y defunción de la provincia de San Juan.</p>
                 </div>
                 <div class="slide">
                     <h2>Trámites de Certificación</h2>
@@ -27,8 +27,8 @@
                 </div>
             </div>
             <div class="navigation">
-                <button class="nav-button" id="ant">&#10094;</button>
-                <button class="nav-button" id="sig">&#10095;</button>
+                <button class="nav-button" id="prev">&#10094;</button>
+                <button class="nav-button" id="next">&#10095;</button>
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
             </a>
         </div>
-        <p>Contacta por WhatsApp</p>
+        <p>Consulta por WhatsApp, sin cargo.</p>
     </footer>
 
     <script>
@@ -46,12 +46,12 @@
         const slideCount = document.querySelectorAll('.slide').length;
         let posicion = 0;
 
-        document.getElementById('sig').addEventListener('click', () => {
+        document.getElementById('next').addEventListener('click', () => {
             posicion = (posicion + 1) % slideCount;
             updateSlide();
         });
 
-        document.getElementById('ant').addEventListener('click', () => {
+        document.getElementById('prev').addEventListener('click', () => {
             posicion = (posicion - 1 + slideCount) % slideCount;
             updateSlide();
         });
@@ -62,5 +62,6 @@
     </script>
 </body>
 </html>
+
 
 
