@@ -85,3 +85,9 @@ footer {
 .whatsapp-icon:hover {
     background-color: #25D366;
 }
+@media (max-width: 600px) {
+    .nav-button {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
