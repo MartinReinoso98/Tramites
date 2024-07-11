@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Servicios de Gestión y Trámites</h1>
+    </header>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <h2>Gestoria de Partidas</h2>
+                    <p>Gestoria de partidas de nacimiento, matrimonio y defunción.</p>
+                </div>
+                <div class="slide">
+                    <h2>Trámites de Certificación</h2>
+                    <p>Trámites de certificación y apostilla (en formato digital y formato papel).</p>
+                </div>
+                <div class="slide">
+                    <h2>Consultas de Páginas</h2>
+                    <p>Consultas de páginas para solicitar partidas de nacionalidad Argentina.</p>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="nav-button" id="ant">&#10094;</button>
+                <button class="nav-button" id="sig">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/2645880338" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+        </div>
+        <p>Contacta con nosotros por WhatsApp</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideCount = document.querySelectorAll('.slide').length;
+        let posicion = 0;
+
+        document.getElementById('sig').addEventListener('click', () => {
+            posicion = (posicion + 1) % slideCount;
+            updateSlide();
+        });
+
+        document.getElementById('ant').addEventListener('click', () => {
+            posicion = (posicion - 1 + slideCount) % slideCount;
+            updateSlide();
+        });
+
+        function updateSlide() {
+            slides.style.transform = `translateX(-${posicion * 100}%)`;
+        }
+    </script>
+</body>
+</html>
+
+
